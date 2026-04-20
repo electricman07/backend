@@ -17,10 +17,6 @@
     "excerpt": {
       "type": "text"
     },
-    "content": {
-      "type": "customField",
-      "customField": "plugin::rich-text-blocks-extended.rich-text-blocks-extended"
-    },
     "image": {
       "type": "customField",
       "customField": "plugin::media-extended.media-extended"
@@ -28,6 +24,13 @@
     "slug": {
       "type": "uid",
       "targetField": "title"
+    },
+    "content": {
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      }
     }
   }
 }

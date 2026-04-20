@@ -534,8 +534,13 @@ export interface ApiPortfolioItemPortfolioItem
     draftAndPublish: true;
   };
   attributes: {
-    content: Schema.Attribute.JSON &
-      Schema.Attribute.CustomField<'plugin::rich-text-blocks-extended.rich-text-blocks-extended'>;
+    content: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<
+        'plugin::ckeditor5.CKEditor',
+        {
+          preset: 'defaultHtml';
+        }
+      >;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
